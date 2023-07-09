@@ -38,14 +38,8 @@
         {% endblock %}
         {% block javascripts %}
             {% do assets.add('jquery',101) %}
-<<<<<<< HEAD
             {% do assets.addJs('theme://js/jquery-migrate.min.js') %}
-            {% do assets.addJs('theme://js/jquery.flexslider.js') %}
-=======
-            <script>window.jQuery || document.write('<script src="{{ url('theme://js/jquery-1.10.2.min.js') }}"><\/script>')</script>
-            <script type="text/javascript" src="{{ url('theme://js/jquery-migrate-1.2.1.min.js') }}"></script>
             {% do assets.addJs('theme://js/jquery.flexslider-min.js') %}
->>>>>>> flexslider-update
             {% do assets.addJs('theme://js/waypoints.js') %}
             {% do assets.addJs('theme://js/jquery.fittext.js') %}
             {% do assets.addJs('theme://js/magnific-popup.js') %}
