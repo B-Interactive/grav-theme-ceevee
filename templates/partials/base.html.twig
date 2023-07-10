@@ -10,6 +10,7 @@
         {% include 'partials/metadata.html.twig' %}
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
         <link rel="icon" type="image/png" href="{{ url('theme://images/favicon.png') }}" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ress@5.0.2/dist/ress.min.css" integrity="sha256-g9RjEgzWffgLAVYaIC4FWNPPuZXNYj5tCbHVuXcN968=" crossorigin="anonymous">
 
          {% block stylesheets %}
                 {% do assets.addCss('theme://css/default.css') %}
