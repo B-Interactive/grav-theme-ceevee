@@ -6,6 +6,12 @@
 <head>
     {% block head %}
         <meta charset="utf-8" />
+
+        <link rel="preconnect" href="https://cdn.jsdelivr.net">
+        <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+        <link rel="preconnect" href="https://api.fonts.coollabs.io">
+        <link rel="dns-prefetch" href="https://api.fonts.coollabs.io">
+
         <title>{% if header.title %}{{ header.title }} | {% endif %}{{ site.title }}</title>
         {% include 'partials/metadata.html.twig' %}
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
