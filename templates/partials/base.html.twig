@@ -16,11 +16,11 @@
         {% include 'partials/metadata.html.twig' %}
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
         <link rel="icon" type="image/png" href="{{ url('theme://images/favicon.png') }}" />
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ress@5.0.2/dist/ress.min.css" integrity="sha256-g9RjEgzWffgLAVYaIC4FWNPPuZXNYj5tCbHVuXcN968=" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" integrity="sha256-HtsXJanqjKTc8vVQjO4YMhiqFoXkfBsjBWcX91T1jr8=" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/v4-shims.min.css" integrity="sha256-0wN/QgUNpsmPMfgBwmpf499zJyQM5AMUuAXl4lsFLqI=" crossorigin="anonymous">
 
          {% block stylesheets %}
+                <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ress@5.0.2/dist/ress.min.css" integrity="sha256-g9RjEgzWffgLAVYaIC4FWNPPuZXNYj5tCbHVuXcN968=" crossorigin="anonymous">
+                <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" integrity="sha256-HtsXJanqjKTc8vVQjO4YMhiqFoXkfBsjBWcX91T1jr8=" crossorigin="anonymous">
+                <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/v4-shims.min.css" integrity="sha256-0wN/QgUNpsmPMfgBwmpf499zJyQM5AMUuAXl4lsFLqI=" crossorigin="anonymous">
                 {% do assets.addCss('theme://css/default.css') %}
                 {% do assets.addCss('theme://css/layout.css') %}
                 {% do assets.addCss('theme://css/media-queries.css') %}
