@@ -11,23 +11,27 @@
         <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
         <link rel="preconnect" href="https://api.fonts.coollabs.io">
         <link rel="dns-prefetch" href="https://api.fonts.coollabs.io">
+        <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+        <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
 
         <title>{% if header.title %}{{ header.title }} | {% endif %}{{ site.title }}</title>
         {% include 'partials/metadata.html.twig' %}
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
         <link rel="icon" type="image/png" href="{{ url('theme://images/favicon.png') }}" />
 
-         {% block stylesheets %}
+        {% block stylesheets %}
                 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ress@5.0.2/dist/ress.min.css" integrity="sha256-g9RjEgzWffgLAVYaIC4FWNPPuZXNYj5tCbHVuXcN968=" crossorigin="anonymous">
                 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" integrity="sha256-HtsXJanqjKTc8vVQjO4YMhiqFoXkfBsjBWcX91T1jr8=" crossorigin="anonymous">
                 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/v4-shims.min.css" integrity="sha256-0wN/QgUNpsmPMfgBwmpf499zJyQM5AMUuAXl4lsFLqI=" crossorigin="anonymous">
+                <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flexslider@2.7.2/flexslider.css" integrity="sha256-d/dpEBCLcGIwnda/oxASOoZ/ygGxLu9iw35dLQ0Mx5Q=" crossorigin="anonymous">
+                <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/magnific-popup@1.1.0/dist/magnific-popup.css" integrity="sha256-RdH19s+RN0bEXdaXsajztxnALYs/Z43H/Cdm1U4ar24=" crossorigin="anonymous">
                 {% do assets.addCss('theme://css/default.css') %}
                 {% do assets.addCss('theme://css/layout.css') %}
                 {% do assets.addCss('theme://css/media-queries.css') %}
-                {% do assets.addCss('theme://css/magnific-popup.css') %}
         {% endblock %}
 
-        <script src="{{ url('theme://js/modernizr.js') }}"></script>
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.0/dist/jquery.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" integrity="sha512-3n19xznO0ubPpSwYCRRBgHh63DrV+bdZfHK52b1esvId4GsfwStQNPJFjeQos2h3JwCmZl0/LgLxSKMAI55hgw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
         {% block assets deferred %}
             {{ assets.css()|raw }}
@@ -46,16 +50,15 @@
              {% include 'partials/footer.html.twig' %}
         {% endblock %}
         {% block javascripts %}
-            {% do assets.add('jquery',101) %}
-            {% do assets.addJs('theme://js/jquery-migrate.min.js') %}
-            {% do assets.addJs('theme://js/jquery.flexslider-min.js') %}
-            {% do assets.addJs('theme://js/waypoints.js') %}
-            {% do assets.addJs('theme://js/jquery.fittext.js') %}
-            {% do assets.addJs('theme://js/magnific-popup.js') %}
+            <script src="https://cdn.jsdelivr.net/npm/jquery-migrate@3.4.1/dist/jquery-migrate.min.js" integrity="sha256-FIp0sJIa14Ah1xboAy7eHNr37XJ5zv19KsvpBq3RKmg=" crossorigin="anonymous"></script>
+            <script src="https://cdn.jsdelivr.net/npm/flexslider@2.7.2/jquery.flexslider-min.js" integrity="sha256-Xho/wO5acc6FhaNGSleUYeDchTzpBzvriCl7q+jStwE=" crossorigin="anonymous"></script>
+            <script src="https://cdn.jsdelivr.net/npm/waypoints@4.0.1/lib/jquery.waypoints.min.js" integrity="sha256-No2qtnsaWysoAu27rHmiqkupkqLr+cZ7mK14TYAEAYw=" crossorigin="anonymous"></script>
+            <script src="https://cdn.jsdelivr.net/npm/fittext.js@1.2.0/jquery.fittext.js" integrity="sha256-xJmpNKOkERNGmTyEfRsOzTCSlfstPw5XudROyqxzLhc=" crossorigin="anonymous"></script>
+            <script src="https://cdn.jsdelivr.net/npm/magnific-popup@1.1.0/dist/jquery.magnific-popup.min.js" integrity="sha256-P93G0oq6PBPWTP1IR8Mz/0jHHUpaWL0aBJTKauisG7Q=" crossorigin="anonymous"></script>
+            <!--<script src="https://cdn.jsdelivr.net/npm/twitter-fetcher@18.0.4/js/twitterFetcher_min.js" integrity="sha256-dwSAcUzB3t9MGA7S5zKqkt6/drEH+Zb4qv3gWNoWVkI=" crossorigin="anonymous"></script>-->
             {% do assets.addJs('theme://js/init.js') %}
-            {% include 'partials/twFetcher.html.twig' %}
         {% endblock %}
-        
+
         {% block bottom %}
             {{ assets.js()|raw }}
             {{ assets.js('bottom')|raw }}
