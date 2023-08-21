@@ -1,3 +1,5 @@
+### _I've archived this repo and ceased my efforts here, as work towards the official themes seems largely abandoned by Grav maintainers, who have been entirely unresponsive.  My time is better spent elsewhere._
+
 # Ceevee Theme for Grav
 
 ![Ceevee](assets/readme_1.png)
